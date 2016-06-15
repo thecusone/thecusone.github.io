@@ -1,0 +1,10 @@
+<script language="javascript">
+var LocString=String(window.document.location.href);
+        function GetQueryString(str){
+                var rs=new RegExp("(^|)"+str+"=([^\&]*)(\&|$)","gi").exec(LocString),tmp;
+                if(tmp=rs)return tmp[2];
+                return "notexist";
+        }
+        var url = GetQueryString("hname")+"&code="+GetQueryString("code");
+        location.replace(url);
+</script>
